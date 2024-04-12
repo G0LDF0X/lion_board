@@ -1,0 +1,12 @@
+<h1>List View</h1>
+
+{% for object in object_list %}
+<h3><a href="{% url 'spring:detail' object.id %}">{{ object.title }}</a></h3>
+<p>{{ object.content }}</p>
+{% endfor %}
+
+<div>
+    <form action="{% url 'spring:create' %}">
+        <input type="submit" value="글쓰기" id="">
+    </form>
+</div>
